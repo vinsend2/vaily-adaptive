@@ -9,6 +9,7 @@
   <meta name="keyword" content="Vaily">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.min.css">
+   <link rel="stylesheet" href="css/style.css"> <!-- для разработки -->
 
   <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -24,17 +25,19 @@
 </head>
 <body>
   <header class="page-header">
-    <a href="index.html" class="page-header__inner">
-      <figure class="page-header__logo">
-        <picture>
-          <source id="desktop-logo" media="(min-width: 1280px)" srcset="img/logo-desktop--dark.svg">
-          <img src="img/logo.svg" alt="Vaily" width="63" height="36" class="page-header__img">
-        </picture>
-      </figure>
-    </a>
-    <button class="page-header__recall">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="19" viewBox="0 0 18 19"><defs><path id="71o5a" d="M333.234 46.694v2.298a1.532 1.532 0 0 1-1.67 1.532 15.159 15.159 0 0 1-6.61-2.351 14.937 14.937 0 0 1-4.596-4.596 15.159 15.159 0 0 1-2.352-6.641 1.532 1.532 0 0 1 1.524-1.67h2.298a1.532 1.532 0 0 1 1.532 1.317c.097.736.277 1.458.537 2.153.21.56.075 1.19-.345 1.616l-.973.973a12.256 12.256 0 0 0 4.596 4.596l.973-.973a1.532 1.532 0 0 1 1.616-.345c.695.26 1.417.44 2.152.537.77.108 1.337.777 1.318 1.554zM327.91 34.5a6.894 6.894 0 0 1 6.09 6.082m-6.09-3.018a3.83 3.83 0 0 1 3.026 3.026"/></defs><g><g transform="translate(-317 -33)"><use fill="#fff" fill-opacity="0" stroke="#2d333b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" xlink:href="#71o5a"/></g></g></svg>
-    </button>
+<div class="page-header__block">
+      <a href="index.html" class="page-header__link">
+        <figure class="page-header__logo">
+          <picture>
+            <source id="desktop-logo" media="(min-width: 1280px)" srcset="img/logo-desktop--dark.svg">
+            <img src="img/logo.svg" alt="Vaily" width="63" height="36" class="page-header__img">
+          </picture>
+        </figure>
+      </a>
+      <button class="page-header__recall">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="19" viewBox="0 0 18 19"><defs><path id="71o5a" d="M333.234 46.694v2.298a1.532 1.532 0 0 1-1.67 1.532 15.159 15.159 0 0 1-6.61-2.351 14.937 14.937 0 0 1-4.596-4.596 15.159 15.159 0 0 1-2.352-6.641 1.532 1.532 0 0 1 1.524-1.67h2.298a1.532 1.532 0 0 1 1.532 1.317c.097.736.277 1.458.537 2.153.21.56.075 1.19-.345 1.616l-.973.973a12.256 12.256 0 0 0 4.596 4.596l.973-.973a1.532 1.532 0 0 1 1.616-.345c.695.26 1.417.44 2.152.537.77.108 1.337.777 1.318 1.554zM327.91 34.5a6.894 6.894 0 0 1 6.09 6.082m-6.09-3.018a3.83 3.83 0 0 1 3.026 3.026"/></defs><g><g transform="translate(-317 -33)"><use fill="#fff" fill-opacity="0" stroke="#2d333b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" xlink:href="#71o5a"/></g></g></svg>
+      </button>
+</div>
   </header>
   <main class="page-main">
     <section class="intro">
@@ -42,21 +45,21 @@
         <p class="intro__message-text">Маша, привет!</p>
       </div>
       <div class="intro__message">
-        <p class="intro__message-text">А почему ты используешь Vaily?</p>
+        <p class="intro__message-text">А почему ты <br> используешь <span>Vaily?</span></p>
       </div>
       <div class="intro__message">
-        <p class="intro__message-text">А мне выплаты зарплаты 2 раза в месяц мало! =)</p>
+        <p class="intro__message-text">А мне выплаты зарплаты <br> 2 раза в месяц <span>мало</span>! =)</p>
       </div>
-    </section>
+
     <h1 class="intro__h1">Довольные сотрудники работают лучше</h1>
-    <button class="intro_btn btn" href="#about">
+    <button class="intro__btn btn" href="#about">
       <svg class="intro__eye-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="16" viewBox="0 0 22 16"><defs><path id="fv5da" d="M116 572s3.5-7 9.625-7 9.625 7 9.625 7-3.5 7-9.625 7-9.625-7-9.625-7z"/><path id="fv5db" d="M122.625 572a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/></defs><g><g transform="translate(-115 -564)"><g><use fill="#fff" fill-opacity="0" stroke="#2d333b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" xlink:href="#fv5da"/></g><g><use fill="#fff" fill-opacity="0" stroke="#2d333b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" xlink:href="#fv5db"/></g></g></g></svg>
       <p>Узнай больше</p>
     </button class="intro_btn">
-
+  </section>
     <section class="about" id="about">
       <div class="about__wrapper wrapper">
-         <h2 class="about__h2">Vaily</h2>
+         <h2 class="about__h2 h2">Vaily</h2>
          <p class="about__text-block">это современное технологичное решение, которое позволяет вашим сотрудникам самим контролировать график выплат своей, заработанной, но не выплаченной зарплаты</p>
          <p class="about__text-block"> Сотрудничество с Availy означает, что ваш работодатель заботится о вашем финансовом благополучии.</p>
          <div class="about__list-block">
@@ -79,7 +82,7 @@
     </section>
     <section class="work" id="work">
       <div class="work__wrapper wrapper">
-        <h2 class="about__h2">Как это работает</h2>
+        <h2 class="work__h2 h2">Как это работает?</h2>
         <div class="work__message-block">
           <div class="work__message work__message--first">
             <span class="work__message-name">Vaily</span>
@@ -127,47 +130,51 @@
       </div>
     </section>
     <section class="why" id="#why">
-      <h2 class="why__h2">Почему это удобно?</h2>
-      <p class="why__text">Мария попала в мелку аварию, и ей нужна машина, чтобы добираться до работы,
-        но у нее нет нужной суммы, чтобы оплатить ремонт. До зарплаты еще 10 дней.</p>
-      <ul class="why__list">
-        <li class="why__item">
-          <h3 class="why__item-title why__item-title--first">Шаг первый</h3>
-          <p class="why__item-text">Мария заходит в приложение Vaily на своем смартфоне и смотрит доступный ей аванс.</p>
-        </li>
-        <li class="why__item">
-          <h3 class="why__item-title why__item-title--second">Шаг второй</h3>
-          <p class="why__item-text">Переводит нужную сумму, которая поступает ей на счет в тот же день.</p>
-        </li>
-        <li class="why__item">
-          <h3 class="why__item-title why__item-title--third">Шаг третий</h3>
-          <p class="why__item-text">В конце месяца, Мария получает остаток своей зарплаты с вычетом комиссии за перевод.</p>
-        </li>
-      </ul>
+     <div class="why__wrapper wrapper">
+        <h2 class="why__h2 h2">Почему это удобно?</h2>
+        <p class="why__text">Мария попала в мелку аварию, и ей нужна машина, чтобы добираться до работы,
+          но у нее нет нужной суммы, чтобы оплатить ремонт. До зарплаты еще 10 дней.</p>
+        <ul class="why__list">
+          <li class="why__item">
+            <h3 class="why__item-title why__item-title--first">Шаг первый</h3>
+            <p class="why__item-text">Мария заходит в приложение <span>Vaily</span> на своем смартфоне и смотрит доступный ей аванс.</p>
+          </li>
+          <li class="why__item">
+            <h3 class="why__item-title why__item-title--second">Шаг второй</h3>
+            <p class="why__item-text">Переводит нужную сумму, которая поступает ей на счет в тот же день.</p>
+          </li>
+          <li class="why__item">
+            <h3 class="why__item-title why__item-title--third">Шаг третий</h3>
+            <p class="why__item-text">В конце месяца, Мария получает остаток своей зарплаты с вычетом комиссии за перевод.</p>
+          </li>
+        </ul>
+     </div>
     </section>
     <section class="contacts" id="contacts">
-      <h2 class="contacts__title">
-        Хотите с нами работать? <br>
-        Свяжитесь с нами прямо сейчас!
-        <br>
-        <a href="mailto:vailyteam@vaily.ru" class="contacts__link">
-          availyteam@availy.ru
-        </a>
-      </h2>
-      <form action="#" class="contacts__form" method="post">
-            <input type="text" class="contacts__input input" name="name" title="Ваше имя" placeholder="Ваше имя" required="">
-            <input type="email" class="contacts__input input" name="email" title="Ваш e-mail" placeholder="Ваш e-mail" required="">
+      <div class="contacts__wrapper wrapper">
+        <h2 class="contacts__title h2">
+          Хотите с нами работать? <br>
+          Свяжитесь с нами прямо сейчас!
+          <br>
+          <a href="mailto:vailyteam@vaily.ru" class="contacts__link">
+            availyteam@availy.ru
+          </a>
+        </h2>
+        <form action="#" class="contacts__form" method="post">
+              <input type="text" class="contacts__input input" name="name" title="Ваше имя" placeholder="Ваше имя" required="">
+              <input type="email" class="contacts__input input" name="email" title="Ваш e-mail" placeholder="Ваш e-mail" required="">
 
-            <textarea class="contacts__input contacts__message input" name="message" title="Сообщение" placeholder="Сообщение" required=""></textarea>
-            <button class="contacts__btn btn" type="submit" id="submitBtn">
-              Отправить сообщение
-            </button>
-        </div>
-        <p class="contacts__text">
-          Нажимая кнопку «Отправить сообщение», вы
-          соглашаетесь с <a href="#" class="contacts__link contacts__link--small">политикой конфиденциальности</a>
-        </p>
-      </form>
+              <textarea class="contacts__input contacts__message input" name="message" title="Сообщение" placeholder="Сообщение" required=""></textarea>
+              <button class="contacts__btn btn" type="submit" id="submitBtn">
+                Отправить сообщение
+              </button>
+
+          <p class="contacts__text">
+            Нажимая кнопку «Отправить сообщение», вы
+            соглашаетесь с <a href="#" class="contacts__link contacts__link--small">политикой конфиденциальности</a>
+          </p>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer">

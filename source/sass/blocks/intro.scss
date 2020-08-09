@@ -1,0 +1,77 @@
+.intro {
+  background-color: #95ccd7;
+  padding-top: 95px;
+  padding-bottom: 40px;
+}
+.intro__message {
+  box-shadow: 5px 5px 20px rgba(45,51,59,.16);
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #fff;
+  padding-left: 20px;
+  width: 210px;
+  margin: 0 auto;
+  min-height: 56px;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &:nth-child(1) {
+  margin-bottom: 8px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 25px;
+    &::before {
+      width: 36px;
+      height: 36px;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    left: -42px;
+    background-color: #ffffff;
+    background-image: url("../img/michael@2x.png");
+      }
+    }
+  &:nth-child(3) {
+    background-color: $yellow;
+    &::before {
+      width: 36px;
+      height: 36px;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    right: -42px;
+    background-color: $yellow;
+    background-image: url("../img/maria@2x.png");
+     }
+    }
+}
+.intro__message-text {
+  font-size: 16px;
+  line-height: 24px;
+  & span {
+    font-weight: bold;
+  }
+}
+.intro__h1 {
+  margin: 40px 0 23px;
+  font-weight: 700;
+  text-shadow: 0 3px 10px rgba(45,51,59,.5);
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 40px;
+}
+.intro__btn {
+  text-align: center;
+  margin: 0 auto;
+}
+.intro__eye-icon {
+  margin-right: 10px;
+}

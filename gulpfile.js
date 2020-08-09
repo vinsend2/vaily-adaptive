@@ -20,9 +20,16 @@ var babel = require('gulp-babel');
 var concat = require("gulp-concat");
 var sourcemaps = require('gulp-sourcemaps');
 
+sass.compiler = require('node-sass');
+
+var sass_paths = [
+  'source/sass/**/*.scss',
+  'source/sass/**/*.sass'
+];
+
 // Таск css.
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.sass") // Берет на вход основной файл scss, где происходят импорты
+  return gulp.src("source/sass/style.scss") // Берет на вход основной файл scss, где происходят импорты
     .pipe(sourcemaps.init()) // Иницициализируем плагин для генерации source map. Если не знаешь зачем они, напиши
       .pipe(plumber()) // Плагин для отслеживания ошибок
       .pipe(sass()) // Переводим из sass в css
@@ -127,7 +134,7 @@ gulp.task("server", function () {
     ui: false
   });
   // Смотрит за файлами и перезагружает, если есть изменение
-  gulp.watch("source/sass/**/*.sass", gulp.series("css", "refresh"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("css", "refresh"));
   gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("scripts", "refresh"));
@@ -141,3 +148,19 @@ gulp.task("refresh", function(done) {
 
 // npm start запустит автоматически слежение и сборку. т.е. вводишь npm start и работаешь, не загядывая больше в консоль, все будут делать за тебя :)
 gulp.task("start", gulp.series("build", "server"));
+
+
+
+gulp.task('sass', function () {
+  return gulp.src(sass_paths)
+
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('source/css'));
+});
+
+
+
+gulp.task('watch', function() {
+  gulp.watch('source/sass/**/*.scss', gulp.parallel('sass'));
+  gulp.watch('source/sass/**/*.sass', gulp.parallel('sass'));
+});

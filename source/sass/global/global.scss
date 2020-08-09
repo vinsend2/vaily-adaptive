@@ -1,0 +1,105 @@
+$desktop: 900px;
+$desktop-width: 1140px;
+$tablet: 767px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$btn-green: #6ca200;
+$green-hvr: #5eaa2f;
+$yellow: #fce35f;
+$grey-hvr: #ebebeb;
+$grey-background: #eaeaea;
+$grey-border: #cdcdcd;
+$blue: #99e8d3;
+$text: #636b76;
+$black: #2d333b;
+$white: #ffffff;
+$orange: #fec846;
+$programm-green: #95bf41;
+$intro: #95ccd7;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: "MuseoSansCyrl", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: $text;
+    counter-reset: why;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .visual-hidden:not(:focus):not(:active),
+  input[type="checkbox"].visual-hidden,
+  input[type="radio"].visual-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  input, textarea {
+    border: 1px solid #d5d6d7;
+    background-color: #fff;
+    padding: 18px 24px 19px;
+    font-size: 14px;
+    font-weight: 300;
+    vertical-align: top;
+    font-family: "MuseoSansCyrl","Arial",sans-serif;
+    transition: all .3s ease-in-out;
+    &:hover {
+      border-color: #adadad;
+      transition: all .3s ease-in-out;
+      z-index: 1;
+      position: relative;
+    }
+  }
+  input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+  .wrapper {
+    padding: 0 5%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+@media (min-width:$desktop) {
+    body {
+    font-size: 16px;
+  }
+    .wrapper {
+    width: $desktop-width;
+    padding: 0;
+  }
+}

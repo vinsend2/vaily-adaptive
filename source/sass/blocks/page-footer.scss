@@ -1,0 +1,14 @@
+.page-footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $text;
+}
+.page-footer__link, .page-footer__copy {
+  text-align: center;
+    opacity: .4;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    margin-top: 0px;
+}

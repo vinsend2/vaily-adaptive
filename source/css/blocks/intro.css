@@ -1,0 +1,24 @@
+.intro {
+  background-color: #95ccd7;
+  padding-top: 95px;
+  padding-bottom: 40px; }
+
+.intro__message {
+  box-shadow: 5px 5px 20px rgba(45, 51, 59, 0.16);
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #fff;
+  padding-left: 20px;
+  width: 215px;
+  margin: 0 auto;
+  min-height: 56px;
+  align-items: center;
+  display: flex; }
+  .intro__message:nth-child(1) {
+    margin-bottom: 8px; }
+  .intro__message:nth-child(2) {
+    margin-bottom: 25px; }
+
+.intro__message-text {
+  font-size: 16px;
+  line-height: 24px; }

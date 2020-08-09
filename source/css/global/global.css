@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "MuseoSansCyrl", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #636b76;
+  counter-reset: why;
+  text-align: left;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.visual-hidden:not(:focus):not(:active),
+input[type="checkbox"].visual-hidden,
+input[type="radio"].visual-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+input {
+  border: 1px solid #cdcdcd; }
+
+input[type="checkbox"], input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.wrapper {
+  padding: 0 5%;
+  margin: auto;
+  overflow: hidden;
+  max-width: 100%; }
+
+@media (min-width: 900px) {
+  body {
+    font-size: 16px; }
+  .wrapper {
+    width: 1140px;
+    padding: 0; } }

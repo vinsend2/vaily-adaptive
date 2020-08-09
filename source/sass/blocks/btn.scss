@@ -1,0 +1,18 @@
+.btn {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    background-color: $yellow;
+    border: none;
+    transition: all .3s ease-in-out;
+    padding: 20px 0;
+    outline: none;
+    & p {
+      margin: 0;
+    }
+    &:hover, :focus {
+      background-color: $orange;
+      border: none;
+    }
+}

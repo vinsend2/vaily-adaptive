@@ -1,0 +1,113 @@
+
+
+.work__message {
+  display: grid;
+  padding-left: 27%;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(45,51,59,.4);
+}
+.work__message-block {
+  max-width: 300px;
+}
+.work__message--second {
+  margin-top: 15px;
+}
+.work__message-name {
+  grid-column: 1;
+  font-size: 14px;
+  &::before {
+    transform: translateY(-50%);
+    background-image: url(../img/icon-bird.svg);
+    width: 39px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 39px;
+    left: 12px;
+    top: 50%;
+    background-color: $orange;
+  }
+}
+.work__message-time {
+  grid-column: 2;
+  text-align: right;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.work__message-text {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: 0.8;
+  line-height: 12px;
+}
+.work__item {
+  padding-left: 64px;
+  position: relative;
+  margin-bottom: 27px;
+  &::before {
+    width: 40px;
+    height: 40px;
+    background-color: $yellow;
+    left: 0;
+    top: 0;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.work__item-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+}
+.work__list {
+  margin-top: 60px;
+}
+.work__item-text {
+  margin: 0;
+  line-height: 22px;
+}
+.work__item--money::before {
+  background-image: url(../img/icon-dollar.svg);
+}
+.work__item--time::before {
+  background-image: url(../img/icon-clock.svg);
+}
+.work__item--coup::before {
+  background-image: url(../img/icon-money.svg);
+}
+.work__tel-block {
+    position: relative;
+    padding-top: 46px;
+    text-align: center;
+    padding-left: 33px;
+    padding-bottom: 100px;
+}
+.work__circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+.work__circle--first {
+  width: 161px;
+  height: 161px;
+  box-shadow: 5px 5px 20px rgba(118,202,209,.2);
+  background-image: linear-gradient(-88deg,#c2edf0 0%,#e3fcff 100%);
+  left: -100px;
+  top: 40px;
+}
+.work__circle--second {
+    width: 289px;
+    height: 289px;
+    box-shadow: 0 3px 20px #76cad1;
+    background-image: linear-gradient(-88deg,#67d7e0 0%,#d1faff 100%);
+    opacity: .2;
+    right: -115px;
+    bottom: 40px;
+}

@@ -36,8 +36,20 @@ input[type="radio"].visual-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-input {
-  border: 1px solid #cdcdcd; }
+input, textarea {
+  border: 1px solid #d5d6d7;
+  background-color: #fff;
+  padding: 18px 24px 19px;
+  font-size: 14px;
+  font-weight: 300;
+  vertical-align: top;
+  font-family: "MuseoSansCyrl","Arial",sans-serif;
+  transition: all .3s ease-in-out; }
+  input:hover, textarea:hover {
+    border-color: #adadad;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+    position: relative; }
 
 input[type="checkbox"], input[type="radio"] {
   position: absolute;
@@ -60,5 +72,5 @@ input[type="checkbox"], input[type="radio"] {
   body {
     font-size: 16px; }
   .wrapper {
-    width: 1140px;
+    width: 1030px;
     padding: 0; } }

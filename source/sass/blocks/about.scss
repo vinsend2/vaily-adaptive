@@ -80,3 +80,65 @@
   height: 18px;
   background-image: url(../img/icon-wind.svg);
 }
+@media (min-width: $desktop) {
+  .about {
+    padding-top: 200px;
+    padding-bottom: 160px;
+  }
+  .about__h2 {
+    font-size: 48px;
+    margin-top: 15px;
+    grid-column: 1;
+    margin-left: 90px;
+    &::before {
+      width: 134px;
+      bottom: 100px;
+      height: 28px;
+    }
+  }
+  .about__inner-block {
+    display: grid;
+    position: relative;
+    margin-bottom: 50px;
+    &::before {
+      width: 86px;
+    height: 86px;
+    position: absolute;
+    content: '';
+    background-image: url(../img/pin-1@1x.png);
+    background-repeat: no-repeat;
+    top: 40px;
+    left: -70px;
+    }
+    &::after {
+      width: 86px;
+      height: 86px;
+      position: absolute;
+      content: '';
+      background-image: url(../img/pin-2@1x.png);
+      background-repeat: no-repeat;
+      top: 100px;
+      left: 90px;
+    }
+  }
+  .about__text-block {
+    grid-column: 2;
+    font-size: 24px;
+    margin-left: 165px;
+    margin-top: 0;
+    line-height: 42px;
+  }
+  .about__wrapper {
+    overflow: visible;
+  }
+  .about__item {
+    max-width: 220px;
+  }
+  .about__item-h3 {
+    font-size: 24px;
+  }
+  .about__item-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -75,3 +75,38 @@
 .intro__eye-icon {
   margin-right: 10px;
 }
+@media (min-width: $desktop) {
+  .intro {
+    background-image: url(../img/bg-couple@1x.png);
+    background-repeat: no-repeat;
+    background-position: 45% bottom;
+    background-size: contain;
+    min-height: 500px;
+  }
+  .intro__message {
+    width: 315px;
+    &:nth-child(3) {
+      margin-right: 130px;
+      transform: translateY(-30px);
+    }
+    &:nth-child(2) {
+      margin-left: 160px;
+      margin-top: 50px;
+    }
+  }
+  .intro__message:first-child {
+    display: none;
+  }
+  .intro__message::before {
+    display: none;
+  }
+  .intro__message-text {
+    padding-right: 50px;
+  }
+  .intro__h1 {
+    font-size: 48px;
+    margin-top: 100px;
+  }
+
+
+}

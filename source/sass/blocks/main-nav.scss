@@ -1,0 +1,73 @@
+.main-nav {
+  display: none;
+}
+
+@media (min-width: $screen-md) {
+.main-nav__item:first-child {
+    margin-right: 38px
+  }
+.main-nav__item:nth-child(2) {
+    margin-right: 42px
+  }
+.main-nav {
+display: block;
+
+&--hidden {
+  display: none
+}
+  &--visible {
+  display: block
+}
+}
+.main-nav__list {
+  display: flex
+}
+.main-nav__link {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  color: $text;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.01px;
+  transition: all 0.3s ease-in-out;
+  &::before {
+    width: 110%;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -5px;
+    background-color: $yellow;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $yellow;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      height: 0
+    }
+  }
+}
+.main-nav__item {
+  &:hover {
+    & .main-nav__link {
+      &::before {
+        height: 0;
+      }
+     }
+    }
+
+.main-nav__item --active {
+    & .main-nav__link {
+        &::before {
+          height: 12px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+  }
+}
+}

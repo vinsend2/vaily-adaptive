@@ -12,3 +12,12 @@
     display: block;
     margin-top: 0px;
 }
+@media (min-width: $desktop) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-footer {
+    padding-bottom: 8px;
+  }
+}

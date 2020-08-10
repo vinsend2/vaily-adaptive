@@ -26,3 +26,49 @@
   border: none;
   outline: none;
 }
+@media (min-width: $desktop) {
+  .page-header__img {
+    width: 117px;
+    height: 77px;
+  }
+  .page-header__block {
+    width: 100%;
+    align-items: center;
+    padding: 13px 40px 13px 40px;
+    background-color: transparent;
+    &--visible {
+      background-color: white;
+    }
+  }
+  .page-header__icon {
+    margin-right: 9px;
+    stroke: white;
+  }
+  .page-header__tel-icon {
+    stroke: white;
+  }
+  .page-header__recall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    background-color: transparent;
+    border: 2px white solid;
+    transition: all .3s ease-in-out;
+    padding: 20px 0;
+    outline: none;
+    border-radius: 1px;
+    font-size: 14px;
+    margin-right: 70px;
+    color: white;
+    & p {
+      margin: 0;
+    }
+    &:hover, :focus {
+      background-color: white;
+      border: none;
+      color: $text;
+    }
+}
+
+}

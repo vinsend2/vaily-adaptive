@@ -21,6 +21,7 @@
 }
 .contacts__message {
   height: 60px;
+  resize: none;
 }
 .contacts__btn {
   width: 100%;
@@ -59,5 +60,84 @@
   .contacts__link {
     font-size: 48px;
     line-height: 62px;
+  }
+  .contacts__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contacts__input {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .contacts__input[name=name] {
+    width: 35%;
+  }
+  .contacts__input[name=email] {
+    width: 55%;
+  }
+  .contacts__input[name=message] {
+    width: 65%;
+  }
+  .contacts__btn {
+    width: 30%;
+  }
+  .contacts__message {
+    padding-top: 33px;
+    padding-bottom: 0;
+    max-height: 50px;
+  }
+  .contacts__link--small {
+    font-size: 14px;
+  }
+  .contacts__text {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .contacts__wrapper {
+    position: relative;
+    overflow: visible;
+  }
+  .contacts__circle {
+    display: block;
+    position: absolute;
+    box-shadow: 5px 5px 20px rgba(118,202,209,.2);
+    background-image: linear-gradient(48deg,#c2edf0 0%,#e3fcff 100%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  @keyframes bounce-small {
+    from {
+      transform: translateY(10px); }
+    to {
+      transform: translateY(-100px); } }
+
+
+  @keyframes bounce-big {
+    from {
+      transform: translateY(50px); }
+    to {
+      transform: translateY(-50px); } }
+  .contacts__circle--first {
+    width: 162px;
+    height: 161px;
+    right: -48px;
+    top: 35px;
+    animation: bounce-big 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite
+  }
+  .contacts__circle--second {
+    width: 76px;
+    height: 76px;
+    background-image: linear-gradient(141deg,#67d7e0 0%,#a4e7ef 100%);
+    opacity: .3;
+    right: 230px;
+    top: 230px;
+    animation: bounce-small 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite!important;
+    animation-delay: 1s;
   }
 }

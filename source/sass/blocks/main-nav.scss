@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: $screen-md) {
+@media (min-width: $desktop) {
 .main-nav__item:first-child {
     margin-right: 38px
   }
@@ -60,8 +60,8 @@ display: block;
       }
      }
     }
-
-.main-nav__item --active {
+  }
+.main-nav__item--active {
     & .main-nav__link {
         &::before {
           height: 12px;
@@ -70,4 +70,4 @@ display: block;
       }
   }
 }
-}
+

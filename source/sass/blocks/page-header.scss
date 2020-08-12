@@ -1,5 +1,6 @@
 .page-header {
   margin: 0 5%;
+  transition: all 0.3s ease-in-out;
 }
 .page-header__logo {
   margin: 0;
@@ -36,7 +37,8 @@
     align-items: center;
     padding: 13px 40px 13px 40px;
     background-color: transparent;
-    &--visible {
+    transition: all 0.3s ease-in-out;
+    &--white {
       background-color: white;
     }
   }
@@ -68,6 +70,21 @@
       background-color: white;
       border: none;
       color: $text;
+    }
+    &--yellow {
+      background-color: $yellow;
+      color: $text;
+      border: 2px solid $yellow;
+      &.page-header__icon {
+        stroke: $text;
+      }
+      .page-header__tel-icon {
+        stroke: $text;
+      }
+      &:hover, :focus {
+        background-color: $orange;
+        border: 2px solid $orange;
+      }
     }
 }
 

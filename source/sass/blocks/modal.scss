@@ -1,0 +1,106 @@
+.modal {
+  display: none;
+}
+.call {
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.call__wrapper {
+  position: fixed;
+  align-items: center;
+  background-color: $black;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+.call__block {
+
+  max-width: 400px;
+  position: relative;
+  background-color: #fff;
+  padding: 50px 24px 32px;
+  margin: 0 auto;
+  top: 130px;
+
+}
+.call--opened {
+  opacity: 1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  transition-delay: 0s;
+}
+.call--closed {
+  opacity: 0;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+.call__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  font-size: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    width: 17px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+    transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+    background-color: #2d333b;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  &::after {
+    width: 17px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    background-color: #2d333b;
+    transition: all .3s ease-in-out;
+  }
+}
+.call__close:focus::after, .call__close:focus::before, .call__close:hover::after, .call__close:hover::before {
+  background-color: #fec846;
+  transition: all .3s ease-in-out;
+}
+.call__h2 {
+  margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: .03px;
+    font-size: 24px;
+    text-align: center;
+}
+.call input, .call__btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.call__icon {
+  margin-right: 9px;
+}
+.call__text {
+  padding-top: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: .01px;
+    text-align: center;
+}
+.call__link {
+  color: #369ba3;
+  text-decoration: underline;
+}
+

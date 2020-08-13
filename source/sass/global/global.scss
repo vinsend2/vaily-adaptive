@@ -87,6 +87,11 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+button,
+button:active,
+button:focus {
+    outline: none;
+}
   .wrapper {
     padding: 0 5%;
     margin: auto;

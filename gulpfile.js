@@ -88,10 +88,14 @@ gulp.task("scripts", function() {
       .pipe(concat("script.js")) // Склеиваем их в один scripts.js
       .pipe(gulp.dest("build/js")) // Складываем build/js
       .pipe(rename("script.min.js")) // Переименовываем в scripts.min.js
-      .pipe(babel({
-        presets: ['@babel/env'] // Прогоняем через babel. Переводит ES6+ в ES5
-      }))
-      .pipe(uglify()) // Минифицируем
+      // .pipe(babel({
+      //   presets: [['@babel/env', {
+      //     corejs: 3,
+      //     useBuiltIns: "usage"
+      // }]],
+      //   // Прогоняем через babel. Переводит ES6+ в ES5
+      // }))
+      // .pipe(uglify()) // Минифицируем
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/js")); //Скдываем в build/js
 });
@@ -107,7 +111,7 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}", // Переносим шрифты
     "source/img/**", // Переносим картинки
     "source/js/**", // Переносим js
-    "source/*.{png,xml,ico,webmanifest,svg}" // Переносим фавиконки
+    "source/*.{png,xml,ico,webmanifest,svg,php}" // Переносим фавиконки
   ], {
     base: "source"
   })

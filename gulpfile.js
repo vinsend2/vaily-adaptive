@@ -19,6 +19,9 @@ var uglify = require("gulp-uglify");
 var babel = require('gulp-babel');
 var concat = require("gulp-concat");
 var sourcemaps = require('gulp-sourcemaps');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
+var webpackConfig = require('./webpack.config.js');
 
 sass.compiler = require('node-sass');
 
@@ -88,17 +91,48 @@ gulp.task("scripts", function() {
       .pipe(concat("script.js")) // Склеиваем их в один scripts.js
       .pipe(gulp.dest("build/js")) // Складываем build/js
       .pipe(rename("script.min.js")) // Переименовываем в scripts.min.js
-      // .pipe(babel({
-      //   presets: [['@babel/env', {
-      //     corejs: 3,
-      //     useBuiltIns: "usage"
-      // }]],
-      //   // Прогоняем через babel. Переводит ES6+ в ES5
-      // }))
+      // .pipe(webpackStream(webpackConfig, webpack))
       // .pipe(uglify()) // Минифицируем
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/js")); //Скдываем в build/js
 });
+
+
+gulp.task('webpack', function () {
+  return gulp.src('build/js/script.min.js')
+    .pipe(webpackStream({
+      mode: 'production',
+      output: {
+        filename: 'script.min.js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              presets:  [
+                ["@babel/preset-env", {
+                  "useBuiltIns": "usage",
+                  "corejs": 2, // or 2,
+                  "targets": {
+                      "firefox": "64", // or whatever target to choose .
+                  },
+                }]
+              ]
+            }
+          }
+        ]
+      },
+      externals: {
+        jquery: 'jQuery'
+      }
+    }))
+    .pipe(gulp.dest('build/js'));
+});
+
+
 
 // Таск для очистки папки
 gulp.task("clean", function () {
@@ -124,6 +158,7 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "scripts",
+  "webpack",
   "sprite",
   "html"
   ));
